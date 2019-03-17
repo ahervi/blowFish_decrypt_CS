@@ -38,7 +38,7 @@ for minIter in range(54, 59):
       cipher = Blowfish.new(key, Blowfish.MODE_CBC, iv)
       msg = cipher.decrypt(plaintext + padding)
       msgLisible = "".join( chr(x) for x in msg)
-      #msg = iv + cipher.decrypt(plaintext)
+
       if "test" in msgLisible :
 
         print("ClearText trouvé :" + str(msgLisible))
